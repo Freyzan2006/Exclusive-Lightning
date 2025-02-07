@@ -15,7 +15,7 @@ export default defineConfig({
       '@componentsLayout': path.resolve(__dirname, 'src/components/layout'),
       '@store': path.resolve(__dirname, 'src/store'),
       '@routers': path.resolve(__dirname, 'src/routers'),
-      "@utils": path.resolve(__dirname, 'src/utils'),
+      '@utils': path.resolve(__dirname, 'src/utils'),
     },
   },
 });

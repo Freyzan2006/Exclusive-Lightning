@@ -4,18 +4,22 @@ import Carousel from './Carousel';
 interface CarouselContainerProps {
   images: string[];
   interval: number;
-  contents: React.ReactNode[]
+  contents: React.ReactNode[];
 }
 
-const CarouselContainer: React.FC<CarouselContainerProps> = ({ images, interval, contents }) => {
+const CarouselContainer: React.FC<CarouselContainerProps> = ({
+  images,
+  interval,
+  contents,
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [animateKey, setAnimateKey] = useState(0); 
-
+  const [animateKey, setAnimateKey] = useState(0);
 
   const goToNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+    setCurrentIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1,
+    );
   };
-
 
   const goToImage = (index: number) => {
     setCurrentIndex(index);
@@ -26,12 +30,11 @@ const CarouselContainer: React.FC<CarouselContainerProps> = ({ images, interval,
       goToNext();
     }, interval);
 
-    return () => clearInterval(timer); 
+    return () => clearInterval(timer);
   }, [interval]);
 
-
   useEffect(() => {
-    setAnimateKey((prevKey) => prevKey + 1); 
+    setAnimateKey((prevKey) => prevKey + 1);
   }, [currentIndex]);
 
   return (
@@ -40,7 +43,7 @@ const CarouselContainer: React.FC<CarouselContainerProps> = ({ images, interval,
       currentIndex={currentIndex}
       goToImage={goToImage}
       animateKey={animateKey}
-      contents = { contents }
+      contents={contents}
     />
   );
 };

@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 interface IProps {
   title: string | React.ReactNode;
   to: string;
-  className?: string
+  className?: string;
 }
 
 const LinkPath: React.FC<IProps> = ({ title, to, className }) => {

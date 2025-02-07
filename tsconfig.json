@@ -8,7 +8,7 @@
       "@componentsLayout/*": ["components/layout/*"],
       "@store/*": ["store/*"],
       "@routers/*": ["routers/*"],
-      "@utils/*": ["utils/*"],
+      "@utils/*": ["utils/*"]
     }
   },
 

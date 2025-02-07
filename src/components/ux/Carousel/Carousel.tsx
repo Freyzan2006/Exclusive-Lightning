@@ -6,27 +6,31 @@ interface CarouselProps {
   currentIndex: number;
   goToImage: (index: number) => void;
   animateKey: number;
-  contents: React.ReactNode[]
+  contents: React.ReactNode[];
 }
 
-const Carousel: React.FC<CarouselProps> = ({ images, currentIndex, goToImage, animateKey, contents }) => {
+const Carousel: React.FC<CarouselProps> = ({
+  images,
+  currentIndex,
+  goToImage,
+  animateKey,
+  contents,
+}) => {
   return (
     <div className={styles.carouselContainer}>
       <div className={styles.imageContainer}>
         <img
-          key={animateKey} 
-          src={`${images[currentIndex]}`} 
+          key={animateKey}
+          src={`${images[currentIndex]}`}
           alt="carousel"
           className={styles.image}
         />
       </div>
 
-
-      <div className={styles.textContainer} key={animateKey} >
+      <div className={styles.textContainer} key={animateKey}>
         {contents[currentIndex]}
       </div>
-    
-     
+
       <div className={styles.dotsContainer}>
         {images.map((_, index) => (
           <div
@@ -36,8 +40,6 @@ const Carousel: React.FC<CarouselProps> = ({ images, currentIndex, goToImage, an
           />
         ))}
       </div>
-
-
     </div>
   );
 };

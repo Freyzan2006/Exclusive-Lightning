@@ -1,5 +1,5 @@
 export interface ICategory {
-    id: number
-    icon: React.ReactNode,
-    title: string
+  id: number;
+  icon: React.ReactNode;
+  title: string;
 }
