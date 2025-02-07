@@ -2,10 +2,11 @@ import React from 'react';
 
 import './styles/tailwind.css';
 
-import Layout from '@components/layout/layout';
+
 import { Route, Routes } from 'react-router';
 import HomePage from './pages/Home';
 import AboutPage from './pages/About';
+import Layout from '@componentsLayout/Layout';
 
 const App: React.FC = () => {
 
