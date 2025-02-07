@@ -1,0 +1,84 @@
+
+.Card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 250px;
+    width: 100%;
+   
+}
+
+.Card__head {
+    width: 100%;
+    background-color: rgb(231, 231, 231);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.Card__img {
+    width: 100%;
+}
+
+.Card__discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgb(192, 46, 46);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    max-width: 50px;
+    width: 100%;
+    color: white;
+}
+
+
+
+.Card__body {
+    
+    width: 100%;
+    min-height: 200px;
+    height: 200px;
+   
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 5px;
+}
+
+.Card__Like {
+    font-size: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 30px;
+    padding: 3px;
+}
+
+.Card__AddToCart {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: transform ease 0.5s;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font: bold
+}
+
+.Card__head:hover .Card__AddToCart {
+    transform: translateY(0);
+}
