@@ -9,7 +9,7 @@ const Logo: React.FC<IProps> = ({ nameLogo, className }) => {
   return (
     <div>
       <Link to="/">
-        <h1 className={` font-bold text-black text-4xl ${className}`}>
+        <h1 className={` font-bold text-black text-2xl md:text-4xl ${className}`}>
           {nameLogo}
         </h1>
       </Link>

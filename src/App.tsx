@@ -1,6 +1,7 @@
 import React from 'react';
 
-import './styles/tailwind.css';
+import "./styles/base.css"
+import './index.css';
 
 import { Route, Routes } from 'react-router';
 import HomePage from './pages/Home';
